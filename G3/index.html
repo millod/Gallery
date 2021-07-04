@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="fa">
+
+<head>
+  <meta charset="UTF-8" />
+  <script src="js/aos.js"></script>
+  <link rel="stylesheet" href="css/aos.css">
+  <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css"/>
+  <script src="js/anime.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css" rel="stylesheet" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <title>gallery</title>
+</head>
+
+<body>
+  <nav class="navbar navbar-light bg-info p-2 fixed-top shadow border-bottom">
+        <a href="#" class="navbar-brand text-light pl-4"><i class="fa fa-sign-out-alt"></i> </a>
+        <a href="#" class="navbar-brand text-light pr-4">Logo</a>
+  </nav>
+
+  <!-- --------------------cartable--------------- -->
+  <div class="s"></div>
+
+  <section class="col text-center border border-muted shadow-sm p-2 rounded ">
+    <div class="detail">
+      <p id="t" class="text-info small pt-2"></p>
+    </div>
+  </section>
+
+  <section class="photo-edit bg-light shadow" dir="rtl">
+    <div class="cartable">
+      <div class="search-nav">
+        <div class="container-fluid p-3">
+          <div class="row">
+
+            <div class="input-group mb-3 col-lg-3 col-md-6 col-sm-4">
+              <div class="input-group-append">
+                <span class="input-group-text shadow">جستجو در مطالب</span>
+              </div>
+              <input class="form-control rounded" type="search" name="search-nav" id="search-box"
+                placeholder="جستجو در مطالب" />
+            </div>
+            <div class="input-group mb-3 col-lg-3 col-md-6 col-sm-4">
+              <div class="input-group-append shadow">
+                <span class="input-group-text">
+                  در بازه زمانی
+                </span>
+              </div>
+              <input class="form-control rounded" type="datetime-local" id="start-date" placeholder="تا" />
+            </div>
+            <div class="input-group mb-3 col-lg-3 col-md-6 col-sm-4 ">
+              <div class="input-group-append shadow">
+                <span class="input-group-text">
+                  تا
+                </span>
+              </div>
+              <input class="form-control rounded" type="datetime-local" id="start-date" placeholder="در بازه زمانی" />
+            </div>
+            <!-- ---------------next - prev -buttonS------------ -->
+            <section aria-label="page navigation">
+              <ul class="pagination col-sm-6 col-mid-3 col-lg-2">
+                <li class="page-item"><a class="page-link shadow-sm" href="#">قبلی</a></li>
+                <li class="page-item"><a class="page-link shadow-sm" href="#">1</a></li>
+                <li class="page-item"><a class="page-link shadow-sm" href="#">2</a></li>
+                <li class="page-item"><a class="page-link shadow-sm" href="#">3</a></li>
+                <li class="page-item"><a class="page-link shadow-sm" href="#">بعدی</a></li>
+
+                <li><button class="sear btn btn-info rounded shadow" type="submit" id="searchBtn">جستجو</button></li>
+
+                <li><button class="res btn btn-outline-danger rounded shadow" type="reset" onclick="reloadPage()">انصراف</button>
+                </li>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <!-- --------------------------------------Gallery------------------------- -->
+
+          <div class="container-fluid shadow-sm">
+            <div class="row">
+              <div class="col-sm-12 col-md-6 col-lg-8">
+                <div class="right-side row p-5 border border-muted rounded shadow-sm">
+
+
+                  <div class="card p-2 m-2 shadow" style="width: 10rem;" id="pic" data-aos="fade-up">
+                    <img src="imges/1.jpg" alt="img" width="100" height="100" class="card-img-top myImg"
+                        title="عکس زیبا"/>
+                    <div class="card-body col text-center">
+                      <p class="cap text-center">عکس زیبا</p>
+                    </div>
+                    <input type="checkbox" name="ch" id="check" class="check">
+                  </div>
+
+                  <div class="card p-2 m-2 shadow" style="width: 10rem;" id="pic" data-aos="fade-up">
+                    <img src="imges/5.jpg" alt="img" width="100" height="100" class="card-img-top myImg"
+                        title="عکس زیبا"/>
+                    <div class="card-body col text-center">
+                      <p class="cap text-center">عکس زیبا</p>
+                    </div>
+                    <input type="checkbox" name="ch" id="check" class="check">
+                  </div>
+
+                  <div class="card p-2 m-2 shadow" style="width: 10rem;" id="pic" data-aos="fade-up">
+                    <img src="imges/6.jpg" alt="img" width="100" height="100" class="card-img-top myImg"
+                        title="عکس زیبا"/>
+                    <div class="card-body col text-center">
+                      <p class="cap text-center">عکس زیبا</p>
+                    </div>
+                    <input type="checkbox" name="ch" id="check" class="check">
+                  </div>
+
+                  <div class="card p-2 m-2 shadow" style="width: 10rem;" id="pic" data-aos="fade-up">
+                    <img src="imges/2.jpg" alt="img" width="100" height="100" class="card-img-top myImg"
+                        title="عکس زیبا"/>
+                    <div class="card-body col text-center">
+                      <p class="cap text-center">عکس زیبا</p>
+                    </div>
+                    <input type="checkbox" name="ch" id="check" class="check">
+                  </div>
+
+                  <div class="card p-2 m-2 shadow" style="width: 10rem;" id="pic" data-aos="fade-up">
+                    <img src="imges/3.jpg" alt="img" width="100" height="100" class="card-img-top myImg"
+                        title="عکس زیبا"/>
+                    <div class="card-body col text-center">
+                      <p class="cap text-center">عکس زیبا</p>
+                    </div>
+                    <input type="checkbox" name="ch" id="check" class="check">
+                  </div>
+
+                  <div class="card p-2 m-2 shadow" style="width: 10rem;" id="pic" data-aos="fade-up">
+                    <img src="imges/4.jpg" alt="img" width="100" height="100" class="card-img-top myImg"
+                        title="عکس زیبا"/>
+                    <div class="card-body col text-center">
+                      <p class="cap text-center">عکس زیبا</p>
+                    </div>
+                    <input type="checkbox" name="ch" id="check" class="check">
+                  </div>
+
+                  <div class="card p-2 m-2 shadow" style="width: 10rem;" id="pic" data-aos="fade-up">
+                    <img src="imges/6.jpg" alt="img" width="100" height="100" class="card-img-top myImg"
+                        title="عکس زیبا"/>
+                    <div class="card-body col text-center">
+                      <p class="cap text-center">عکس زیبا</p>
+                    </div>
+                    <input type="checkbox" name="ch" id="check" class="check">
+                  </div>
+
+                  <div class="card p-2 m-2 shadow" style="width: 10rem;" id="pic" data-aos="fade-up">
+                    <img src="imges/4.jpg" alt="img" width="100" height="100" class="card-img-top myImg"
+                        title="عکس زیبا"/>
+                    <div class="card-body col text-center">
+                      <p class="cap text-center">عکس زیبا</p>
+                    </div>
+                    <input type="checkbox" name="ch" id="check" class="check">
+                  </div>
+
+                  <div class="card p-2 m-2 shadow" style="width: 10rem;" id="pic" data-aos="fade-up">
+                    <img src="imges/5.jpg" alt="img" width="100" height="100" class="card-img-top myImg"
+                        title="عکس زیبا"/>
+                    <div class="card-body col text-center">
+                      <p class="cap text-center">عکس زیبا</p>
+                    </div>
+                    <input type="checkbox" name="ch" id="check" class="check">
+                  </div>
+
+                  <div class="card p-2 m-2 shadow" style="width: 10rem;" id="pic" data-aos="fade-up">
+                    <img src="imges/3.jpg" alt="img" width="100" height="100" class="card-img-top myImg"
+                        title="عکس زیبا"/>
+                    <div class="card-body col text-center">
+                      <p class="cap text-center">عکس زیبا</p>
+                    </div>
+                    <input type="checkbox" name="ch" id="check" class="check">
+                  </div>
+
+                  <div class="card p-2 m-2 shadow" style="width: 10rem;" id="pic" data-aos="fade-up">
+                    <img src="imges/2.jpg" alt="img" width="100" height="100" class="card-img-top myImg"
+                        title="عکس زیبا"/>
+                    <div class="card-body col text-center">
+                      <p class="cap text-center">عکس زیبا</p>
+                    </div>
+                    <input type="checkbox" name="ch" id="check" class="check">
+                  </div>
+                  
+                  <div class="card p-2 m-2 shadow" style="width: 10rem;" id="pic" data-aos="fade-up">
+                    <img src="imges/1.jpg" alt="img" width="100" height="100" class="card-img-top myImg"
+                        title="عکس زیبا"/>
+                    <div class="card-body col text-center">
+                      <p class="cap text-center">عکس زیبا</p>
+                    </div>
+                    <input type="checkbox" name="ch" id="check" class="check">
+                  </div>
+
+                  <div class="card p-2 m-2 shadow" style="width: 10rem;" id="pic" data-aos="fade-up">
+                    <img src="imges/5.jpg" alt="img" width="100" height="100" class="card-img-top myImg"
+                        title="عکس زیبا"/>
+                    <div class="card-body col text-center">
+                      <p class="cap text-center">عکس زیبا</p>
+                    </div>
+                    <input type="checkbox" name="ch" id="check" class="check">
+                  </div>
+
+                  <div class="card p-2 m-2 shadow" style="width: 10rem;" id="pic" data-aos="fade-up">
+                    <img src="imges/6.jpg" alt="img" width="100" height="100" class="card-img-top myImg"
+                        title="عکس زیبا"/>
+                    <div class="card-body col text-center">
+                      <p class="cap text-center">عکس زیبا</p>
+                    </div>
+                    <input type="checkbox" name="ch" id="check" class="check">
+                  </div>
+
+                  <div class="card p-2 m-2 shadow" style="width: 10rem;" id="pic" data-aos="fade-up">
+                    <img src="imges/2.jpg" alt="img" width="100" height="100" class="card-img-top myImg"
+                        title="عکس زیبا"/>
+                    <div class="card-body col text-center">
+                      <p class="cap text-center">عکس زیبا</p>
+                    </div>
+                    <input type="checkbox" name="ch" id="check" class="check">
+                  </div>
+
+                  <div class="card p-2 m-2 shadow" style="width: 10rem;" id="pic" data-aos="fade-up">
+                    <img src="imges/3.jpg" alt="img" width="100" height="100" class="card-img-top myImg"
+                        title="عکس زیبا"/>
+                    <div class="card-body col text-center">
+                      <p class="cap text-center">عکس زیبا</p>
+                    </div>
+                    <input type="checkbox" name="ch" id="check" class="check">
+                  </div>
+
+                  <div class="card p-2 m-2 shadow" style="width: 10rem;" id="pic" data-aos="fade-up">
+                    <img src="imges/4.jpg" alt="img" width="100" height="100" class="card-img-top myImg"
+                        title="عکس زیبا"/>
+                    <div class="card-body col text-center">
+                      <p class="cap text-center">عکس زیبا</p>
+                    </div>
+                    <input type="checkbox" name="ch" id="check" class="check">
+                  </div>
+
+                  <div class="card p-2 m-2 shadow" style="width: 10rem;" id="pic" data-aos="fade-up">
+                    <img src="imges/6.jpg" alt="img" width="100" height="100" class="card-img-top myImg"
+                        title="عکس زیبا"/>
+                    <div class="card-body col text-center">
+                      <p class="cap text-center">عکس زیبا</p>
+                    </div>
+                    <input type="checkbox" name="ch" id="check" class="check">
+                  </div>
+
+                  <div class="card p-2 m-2 shadow" style="width: 10rem;" id="pic" data-aos="fade-up">
+                    <img src="imges/4.jpg" alt="img" width="100" height="100" class="card-img-top myImg"
+                        title="عکس زیبا"/>
+                    <div class="card-body col text-center">
+                      <p class="cap text-center">عکس زیبا</p>
+                    </div>
+                    <input type="checkbox" name="ch" id="check" class="check">
+                  </div>
+
+                  <div class="card p-2 m-2 shadow" style="width: 10rem;" id="pic" data-aos="fade-up">
+                    <img src="imges/5.jpg" alt="img" width="100" height="100" class="card-img-top myImg"
+                        title="عکس زیبا"/>
+                    <div class="card-body col text-center">
+                      <p class="cap text-center">عکس زیبا</p>
+                    </div>
+                    <input type="checkbox" name="ch" id="check" class="check">
+                  </div>
+
+                  <div class="card p-2 m-2 shadow" style="width: 10rem;" id="pic" data-aos="fade-up">
+                    <img src="imges/3.jpg" alt="img" width="100" height="100" class="card-img-top myImg"
+                        title="عکس زیبا"/>
+                    <div class="card-body col text-center">
+                      <p class="cap text-center">عکس پرنده</p>
+                    </div>
+                    <input type="checkbox" name="ch" id="check" class="check">
+                  </div>
+
+                  <div class="card p-2 m-2 shadow" style="width: 10rem;" id="pic" data-aos="fade-up">
+                    <img src="imges/2.jpg" alt="img" width="100" height="100" class="card-img-top myImg"
+                        title="عکس زیبا"/>
+                    <div class="card-body col text-center">
+                      <p class="cap text-center">عکس زیبا</p>
+                    </div>
+                    <input type="checkbox" name="ch" id="check" class="check">
+                  </div>
+
+                </div>
+              </div>
+
+
+              <div class="col-sm-12 col-md-6 col-lg-4 border border-muted rounded p-4">
+                <div class="btns col-sm-9 pb-5">
+                  <button class="btn btn-outline-info" type="submit" id="save">ذخیره</button>
+                  <button class="btn btn-danger " type="reset" id="bt"><a href="index.html" id="ex"
+                      class="text-white text-decoration-none">بازگشت</a></button>
+                </div>
+                <div class="left-side row p-2">
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+
+          <!-- -----------modal------------>
+          <div id="myModal" class="modal">
+
+            <span class="text-light close">&times;</span>
+
+            <img class="col-lg-4 col-md-4 col-sm-3 modal-contents" id="img01">
+
+            <div id="caption"></div>
+            
+          </div>
+
+          <!-- --------------------end modal---------- -->
+       <!-- -------------footer------------------------------- -->
+    <div class="foot col-12 border p-5 border-muted shadow"></div>
+ 
+  <!-- ---------------------------------------------------javaScript n jQuery ---------------------------------------- -->
+  
+  <script>
+    // ------------------------------------------------date----------------------
+    var d = new Date();
+    document.getElementById("t").innerHTML = d;
+    //   -------------------------
+    function counter_fn() {
+      var counter = document.getElementById("pagerCount");
+      var count = 0;
+      count = counter.value;
+      count = count + 1;
+      counter.innerHTML = count;
+    }
+    window.onload = counter_fn;
+    // ---------------------------------------upload--------------------
+
+    $(function (ready) {
+      $(".check").change(function () {
+        var check = $(this);
+        var checked = check.prop('checked');
+        if (checked) {
+          $(".left-side").append(check.parent());
+        } else {
+          $(".right-side").append(check.parent());
+        }
+      });
+    });
+    // ---------------------------save n delete---------------------
+    function reloadPage() {
+      location.reload(true);
+    }
+    $("#bt").click(function () {
+      $("#ex").click();
+    });
+    // ----------------------modal------
+      
+       var modal = $("#myModal");
+    var modalImg = modal.find('.modal-contents');
+
+    var img = $(".myImg");
+    var captionBox = $("#caption");
+
+    img.click(function(){
+      modalImg.attr('src',$(this).attr('src'));
+      captionBox.text($(this).attr('title'));
+      modal.show();
+      });
+   
+    var modalCloser = $(".close")
+
+    modalCloser.click(function(){
+      modal.hide();
+    });
+
+    // -----------save--------
+    // -------------search------------
+    $(document).ready(function () {
+      $("#search-box").on("keyup", function () {
+        var value = $(this).val().toLowerCase();
+        $('.cap').filter(function () {
+          $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+        });
+      });
+    });
+
+  // ------------------------------
+  anime({
+  targets: '.card',
+  scale: [
+    {value: .1, easing: 'easeOutSine', duration: 500},
+    {value: 1, easing: 'easeInOutQuad', duration: 500}
+  ],
+  delay: anime.stagger(100, {grid: [14, 5], from: 'center'})
+});
+
+  AOS.init();
+
+  </script>
+</body>
+
+</html>
